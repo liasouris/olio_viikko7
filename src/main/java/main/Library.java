@@ -15,11 +15,15 @@ class Library {
     }
 
     public void listBooks() {
+        int totalCopies = 0; 
+    
         for (Book book : books) {
             book.displayInfo();
             System.out.println("Kirjan kategoria: " + book.categorize());
-        }
-        System.out.println("Kirjojen määrä kirjastossa on: " + books.size());
+            totalCopies += book.copies; 
+    
+        System.out.println("Kirjojen määrä kirjastossa on: " + totalCopies); // Tulosta kokonaismäärä
+    }
     }
 
     public ArrayList<Book> getBooks() {
