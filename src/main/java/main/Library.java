@@ -3,7 +3,7 @@ package main;
 import java.util.ArrayList;
 
 class Library {
-    private ArrayList<Book> books;
+    private ArrayList<Book> books = new ArrayList<>();
 
     public Library() {
         books = new ArrayList<>();
@@ -22,7 +22,7 @@ class Library {
             System.out.println("Kirjan kategoria: " + book.categorize());
             totalCopies += book.copies; 
     
-        System.out.println("Kirjojen määrä kirjastossa on: " + totalCopies); // Tulosta kokonaismäärä
+        System.out.println("Kirjojen määrä kirjastossa on: " + totalCopies);
     }
     }
 
