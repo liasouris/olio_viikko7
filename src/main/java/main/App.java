@@ -35,7 +35,7 @@ public class App {
                         int pages = Integer.parseInt(sc.nextLine()); 
                         System.out.println("Anna kirjojen määrä:");
                         int copies = Integer.parseInt(sc.nextLine());
-                        
+
                         if (bookType == 1) {
                             library.addBook(new FictionBook(title, author, pages, copies));
                         } else if (bookType == 2) {
@@ -70,11 +70,11 @@ public class App {
 
                     case 4:
                         System.out.println("Anna palautettavan kirjan nimi:");
-                        String returnTitle = sc.nextLine();
+                        String returnBook = sc.nextLine();
                         boolean foundReturn = false;
     
                         for (Book book : library.getBooks()) {
-                            if (book instanceof FictionBook && book.title.equals(returnTitle)) {
+                            if (book instanceof FictionBook && book.title.equals(returnBook)) {
                                 ((FictionBook) book).returnBook();
                                 foundReturn = true;
                                 break;
