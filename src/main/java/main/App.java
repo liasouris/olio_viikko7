@@ -32,10 +32,10 @@ public class App {
                         System.out.println("Anna kirjailijan nimi:");
                         String author = sc.nextLine();
                         System.out.println("Anna sivumäärä:");
-                        int pages = sc.nextInt();
+                        int pages = Integer.parseInt(sc.nextLine()); 
                         System.out.println("Anna kirjojen määrä:");
-                        int copies = sc.nextInt();
-    
+                        int copies = Integer.parseInt(sc.nextLine());
+                        
                         if (bookType == 1) {
                             library.addBook(new FictionBook(title, author, pages, copies));
                         } else if (bookType == 2) {
