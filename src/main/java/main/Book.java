@@ -15,6 +15,15 @@ abstract class Book {
 
     public void displayInfo() {
         System.out.println("Nimi: " + title + ", Kirjailija: " + author + ", Sivut: " + pages + ", Määrä: " + copies);
+
+    }
+
+    public String getAuthor(){
+        return author;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public abstract String categorize();

@@ -70,11 +70,11 @@ public class App {
 
                     case 4:
                         System.out.println("Anna palautettavan kirjan nimi:");
-                        String returnBook = sc.nextLine();
+                        String returnTitle = sc.nextLine();
                         boolean foundReturn = false;
     
                         for (Book book : library.getBooks()) {
-                            if (book instanceof FictionBook && book.title.equals(returnBook)) {
+                            if (book instanceof FictionBook && book.title.equals(returnTitle)) {
                                 ((FictionBook) book).returnBook();
                                 foundReturn = true;
                                 break;

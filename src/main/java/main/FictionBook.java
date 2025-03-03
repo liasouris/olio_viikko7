@@ -15,12 +15,12 @@ class FictionBook extends Book implements Borrowable {
     @Override
      
     public void borrow() {
-        if (copies > 0) {
-            copies--;
-            borrowedCopies++;
-            System.out.println("Kirja " + title + " on nyt lainattu.");
-        } else {
+        if (copies < 1) {
             System.out.println("Kirjaa " + title + " ei enään ole lainattavissa!");
+        } else {
+            copies --;
+            borrowedCopies ++;
+            System.out.println("Kirja" + title + "on nyt lainattu.");
         }
     }
 
